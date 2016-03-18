@@ -18,11 +18,7 @@
     <script type="text/javascript">
       
       //Create a model
-      var Movie = Backbone.Model.extend({
-        initialize: function(options) {
-          console.log(options);
-        }
-      });
+      var Movie = Backbone.Model.extend();
 
       // Create an instance of the model
       var movie1 = new Movie({
@@ -30,7 +26,22 @@
         year: 2012
       });
 
-      console.log(movie1);
+      var movie2 = new Movie({});
+
+      var movie3 = new Movie();
+
+      var movie4 = new Movie(123);
+
+      var movie5 = new Movie({
+        name: 'Frozen',
+        year: 2013
+      });
+
+      //Create a collection
+      var Movies = Backbone.Collection.extend();
+      var myMovies = new Movies({name:'hello'},{name:'boop'});
+
+      console.log(myMovies);
 
     </script>
   </body>
